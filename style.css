@@ -1,41 +1,100 @@
+/* Mobile first */
+/* style de base et reset */
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 html, body {
-	 height: 100%;
-	 display: flex;
-	 align-items: center;
-	 justify-content: center;
-	 background-image: linear-gradient(#95D7AE, rgb(241, 236, 236), rgb(241, 236, 236), #95D7AE);
-     background-size: 100% 100%;
-     font-family: sans-serif;
+  height: 100%;
+  font-family: sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  background-color: #f5f5f5;
+  min-height: 100vh;
+}
+
+ul {
+  list-style: none;
+}
+
+/* header */
+
+header {
+  padding: 1rem;
+  width: 100%;
 }
 
 h1 {
   color: rgb(121, 35, 143);  
   text-align: center;
+  font-size: 1.5rem;
 }
 
-/* Cartes thématiques */
+/* main */
+
+main {
+  flex: 1;
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* cartes thématiques */
+
 .card {
-   width: 18rem;
-   padding: 1rem;
-   border-radius: .3rem;
-   margin: 1rem;
-   background: linear-gradient(30deg,rgba(149, 215, 174, 1) 50%, rgba(235, 255, 235, 1) 80%);
+  width: 100%;
+  max-width: 25rem;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  background-color: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .card h2 {
   color: rgb(121, 35, 143);  
   text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 1.3rem;
+}
+
+/*skills*/
+
+.card ul {
+  margin-bottom: 2rem;
 }
 
 .card .skill {
   position: relative;
   display: flex;
   color: rgb(121, 35, 143);
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
   justify-content: space-between;
+  align-items: flex-start;
 }
 
-/* barre de niveau */
+.card .skill h3 {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.card .skill p {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+
+/* barre de niveau*/
+
 .level::after {
   position: absolute;
   left: 0;
@@ -45,10 +104,10 @@ h1 {
   border: 1px solid rgb(121, 35, 143);
   width: 100%;
   height: 1rem;
-  padding: .1rem;
+  padding: 0.1rem;
   background-clip: content-box;
   box-sizing: border-box;
-  border-radius: .2rem;
+  border-radius: 0.2rem;
   background-image: linear-gradient(to right, rgb(121, 35, 143), rgb(121, 35, 143));
   background-repeat: no-repeat;
   background-position: left center;
@@ -56,54 +115,146 @@ h1 {
 
 /* Pourcentage des skills */
 .card .skill.html .level::after {
-	background-size: 80% 1em;
+  background-size: 80% 1em;
 }
 
 .card .skill.css .level::after {
-	background-size: 70% 1em;
+  background-size: 70% 1em;
 }
 
 .card .skill.javascript .level::after {
-	background-size: 70% 1em;
+  background-size: 70% 1em;
 }
 
 .card .skill.node .level::after {
-	background-size: 70% 1em;
+  background-size: 70% 1em;
 }
 
 .card .skill.express .level::after {
-	background-size: 70% 1em;
+  background-size: 70% 1em;
 }
 
 .card .skill.postgresql .level::after {
-	background-size: 70% 1em;
+  background-size: 70% 1em;
 }
 
 .card .skill.docker .level::after {
-	background-size: 60% 1em;
+  background-size: 60% 1em;
+}
+
+
+/*formulaire */
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  color: rgb(121, 35, 143);
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+input[type="text"] {
+  padding: 0.75rem;
+  border: 2px solid rgb(121, 35, 143);
+  border-radius: 0.3rem;
+  font-size: 1rem;
+  font-family: inherit;
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  border-color: rgb(121, 35, 143);
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+}
+
+button {
+  padding: 0.75rem 2rem;
+  background-color: rgb(121, 35, 143);
+  color: white;
+  border: none;
+  border-radius: 0.3rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+button:hover {
+  background-color: rgb(101, 25, 123);
+}
+
+button:active {
+  transform: scale(0.98);
 }
 
 /* footer */
-.footer {
-    color: rgb(121, 35, 143);  
-    text-align: center;
+
+footer {
+  padding: 1.5rem;
+  width: 100%;
 }
 
-/* Media queries */
-/* Desktop (min-width: 1024px) */
+.footer p {
+  color: rgb(121, 35, 143);  
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+/*Media Queries */
+
 @media screen and (min-width: 1024px) {
-
-.parent {
-display: grid;
-grid-template-columns: repeat(4, 1fr);
-grid-template-rows: repeat(5, 1fr);
-grid-column-gap: 0px;
-grid-row-gap: 0px;
-}
-
-.div1 { grid-area: 1 / 1 / 2 / 6; }
-.div2 { grid-area: 2 / 1 / 5 / 3; }
-.div3 { grid-area: 2 / 3 / 5 / 5; }
-.div4 { grid-area: 5 / 1 / 6 / 5; } 
-
+  
+  body {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+    padding: 1rem 0;
+  }
+  
+  main {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    gap: 2rem;
+    padding: 2rem 3rem;
+    align-items: start;
+    max-width: 1400px;
+    margin: 0 auto;
+    width: 100%;
+  }
+  
+  section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .card {
+    width: 100%;
+    max-width: 35rem;
+  }
+  
+  footer {
+    padding: 2rem;
+  }
+  
+  .footer p {
+    font-size: 1rem;
+  }
 }
