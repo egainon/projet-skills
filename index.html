@@ -7,48 +7,109 @@
     <title>Projet Skills</title>
 </head>
 <body>
-    <header>
-        <h1>Skills</h1>
+  <!--header-->
+    <header aria-label="En-tête du site">
+        <h1 id="title">Skills</h1>
     </header>
-    <main>
-    <section>
-    <div>
-    <h2>Frontend</h2>
-        <p>HTML</p>
-        <p>CSS</p>
-        <p>Javascript</p>
-    <form>
-      <label>
+   
+
+  <!--main-->  
+   <main aria-label="Contenu principal">
+    <section id="container-card-1" aria-labelledby="frontend-title">
+    <div class="card">
+  
+  <!--première thématique : frontend-->    
+    <h2 id="frontend-title">Frontend</h2>
+    <!--liste des skills--> 
+      <ul aria-label="Liste des skills frontend">
+        <!--premier skill--> 
+        <li>
+          <div class="skill html">
+          <h3>HTML</h3>
+          <p class="level">80%</p>
+          </div>
+        </li>
+        <!--deuxieme skill--> 
+        <li>
+          <div class="skill css">
+          <h3>CSS</h3>
+          <p class="level">70%</p>
+          </div>
+        </li>
+        <!--trosieme skill--> 
+        <li>
+          <div class="skill javascript">
+          <h3>JavaScript</h3>
+          <p class="level">70%</p>
+          </div>
+        </li>
+      </ul>
+     <!--formulaire-->   
+    <form aria-label="Formulaire d’ajout de compétence frontend">
+      <label for="input-skill-frontend">
         Nouveau Skills :
-        <input type="text" id="input-skill" placeholder="HTML">
+        <input type="text" id="input-skill-frontend" placeholder="HTML">
       </label>
+      <!--bouton-->
       <div class="button">
-      <button type="submit">Ajouter</button>
+      <button type="submit" aria-label="Ajouter un skill frontend">Ajouter</button>
       </div>
     </form>
     </div>
-    </section>  
-    <section>
-    <div>
-    <h2>Backend</h2>
-        <p>Nodes.js</p>
-        <p>Express</p>
-        <p>PostgreSQL</p>
-        <p>Docker</p>
-    <form>
-      <label>
+    </section> 
+
+  <!--deuxième thématique : backend--> 
+    <section id="container-card-2" aria-labelledby="backend-title">
+    <div class="card">
+    <h2 id="backend-title">Backend</h2>
+    <!--liste des skills--> 
+    <ul aria-label="Liste des skills backend">
+        <!--premier skill--> 
+        <li>
+          <div class="skill node">
+          <h3>Node.js</h3>
+          <p class="level">70%</p>
+          </div>
+        </li>
+        <!--deuxieme skill--> 
+        <li>
+          <div class="skill express">
+          <h3>Express</h3>
+          <p class="level">70%</p>
+          </div>
+        </li>
+        <!--troisieme skill--> 
+        <li>
+          <div class="skill postgresql">
+          <h3>PostgreSQL</h3>
+          <p class="level">70%</p>
+          </div>
+        </li>
+        <!--quatrieme skill--> 
+        <li>
+          <div class="skill docker">
+          <h3>Docker</h3>
+          <p class="level">60%</p>
+          </div>
+        </i>
+    </ul> 
+     <!--forumlaire-->   
+    <form aria-label="Formulaire d’ajout de compétence backend">
+      <label for="input-skill-backend">
         Nouveau Skills :
-        <input type="text" id="input-skill" placeholder="PostgreSQL">
+        <input type="text" id="input-skill" aria-label="Nom du nouveau skill backend" placeholder="PostgreSQL">
       </label>
+      <!--bouton-->
       <div class="button">
-      <button type="submit">Ajouter</button>
+      <button type="submit" aria-label="Ajouter un skill backend">Ajouter</button>
       </div>
     </form>
      </div>   
     </section> 
-
 </main>
-<footer>
+
+  <!--footer-->
+<footer class="footer" aria-label="Pied de page">
     <p>Emilie Gainon 2026</p>
 </footer>
 </body>
