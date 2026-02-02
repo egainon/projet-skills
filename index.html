@@ -1,31 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <title>Projet Skills</title>
 </head>
 <body>
     <header>
-        <h1>En-tête</h1>
+        <h1>Skills</h1>
     </header>
     <main>
-<form>
-  <ul>
-    <li>
-      <label for="name">Theme 1:</label>
-      <input type="text" id="name" name="user_name" />
-    </li>
-    <li>
-      <label for="mail">E-mail&nbsp;:</label>
-      <input type="email" id="mail" name="user_mail" />
-    </li>
-    <li>
-      <label for="msg">Message&nbsp;:</label>
-      <textarea id="msg" name="user_message"></textarea>
-    </li>
-  </ul>
-</form>
+    <section>
+    <div>
+    <h2>Frontend</h2>
+        <p>HTML</p>
+        <p>CSS</p>
+        <p>Javascript</p>
+    <form>
+      <label>
+        Nouveau Skills :
+        <input type="text" id="input-skill" placeholder="HTML">
+      </label>
+      <div class="button">
+      <button type="submit">Ajouter</button>
+      </div>
+    </form>
+    </div>
+    </section>  
+    <section>
+    <div>
+    <h2>Backend</h2>
+        <p>Nodes.js</p>
+        <p>Express</p>
+        <p>PostgreSQL</p>
+        <p>Docker</p>
+    <form>
+      <label>
+        Nouveau Skills :
+        <input type="text" id="input-skill" placeholder="PostgreSQL">
+      </label>
+      <div class="button">
+      <button type="submit">Ajouter</button>
+      </div>
+    </form>
+     </div>   
+    </section> 
+
 </main>
 <footer>
     <p>Emilie Gainon 2026</p>
