@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script defer src="index.js"></script>
+    <script defer src="script.js"></script>
     <title>Projet Skills</title>
 </head>
 <body>
@@ -49,7 +49,11 @@
     <form aria-label="Formulaire d’ajout de compétence frontend">
       <label for="input-skill-frontend">
         Nouveau Skills :
-        <input type="text" id="input-skill-frontend" placeholder="HTML">
+        <input 
+            type="text" 
+            name="skillName"
+            id="input-skill-frontend" 
+            placeholder="HTML">
       </label>
       <!--bouton-->
       <div class="button">
@@ -98,7 +102,11 @@
     <form aria-label="Formulaire d’ajout de compétence backend">
       <label for="input-skill-backend">
         Nouveau Skills :
-        <input type="text" id="input-skill" aria-label="Nom du nouveau skill backend" placeholder="PostgreSQL">
+        <input 
+            type="text"
+            name="skillName"
+            id="input-skill-backend" 
+            placeholder="PostgreSQL">
       </label>
       <!--bouton-->
       <div class="button">

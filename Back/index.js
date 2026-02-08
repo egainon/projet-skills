@@ -6,14 +6,14 @@ const {neon} = require('@neondatabase/serverless');
 const app = express();
 const PORT = process.env.PORT || 4242;
 
-app.get('/', async (_, res) => {
+app.get('/themes', async (_, res) => {
     try {
     const sql = neon(`${process.env.DATABASE_URL}`);
     const response = await sql`
         SELECT
-            themes.id,
+            themes.id AS theme_id,
             themes.libelle,
-            skills.id,
+            skills.id AS skill_id,
             skills.intitule,
             skills.niveau
         FROM themes
