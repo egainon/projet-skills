@@ -40,7 +40,7 @@ h1 {
 /* main */
 
 main {
-  flex: 1;
+  flex: 1; /*prend tout l’espace disponible restant dans le conteneur flex.*/
   width: 100%;
   padding: 1rem;
   display: flex;
@@ -78,8 +78,8 @@ main {
   display: flex;
   color: rgb(121, 35, 143);
   margin-bottom: 2.5rem;
-  justify-content: space-between;
-  align-items: flex-start;
+  justify-content: space-between;/*espace réparti entre les éléments*/
+  align-items: flex-start;/*alignement en haut du conteneur*/
 }
 
 .card .skill h3 {
